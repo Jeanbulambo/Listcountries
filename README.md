@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Metrics-webapp
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- JavaScript
+- React-Redux
 
-### `npm start`
+## Live Demo (if available)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Live Demo Link](https://soft-centaur-f05086.netlify.app/)
+[video] (https://www.loom.com/share/56642431b1a64efea67ae826f50c3a2f)
+## Getting Started
+- Make sure you have node installed on your local machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+step 1: Clone this repo locally using git in the command line and the following command
 
-### `npm test`
+git clone git@github.com:Jeanbulambo/Metrics-webapp.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Step 2: run npm install to download the necessary modules.
 
-### `npm run build`
+step 3: run npm start to load the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Any html and css code editor like Vscode or Vim.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Description
+API First you need to choose an API to base the development of the webapp on. The API should allow you to get numeric values based on a parameter. We recommend that you choose an API that is open or needs an API key. If you choose an API that require authentication, you should implement it on your own.
 
-### `npm run eject`
+Some example APIs are:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Financial modeling prep API: stock data.
+Air pollution API: air quality data.
+You can find many APIs in this GitHub repo or in ProgrammableWeb. Some of the APIs requires a token for authentication and some others are just open.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+You should follow these design guidelines, including:
+Colors (select one main color for your website).
+Typography: font face, size and weight.
+Layout: composition and space between elements.
+Original design idea by Nelson Sakwa on Behance.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The Creative Commons license of the design requires that you give appropriate credit to the author. Therefore, you must do it in the README of your project.
 
-## Learn More
+Interactions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Home page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+When the page loads, the webapp shows the list of categories that could be filtered out by some parameter, for example by the category name.
+Along with the category name, you will display some numeric values per category that come from the API.
+When the user clicks (or taps) on a category item, the application navigates to the details page.
+Details page
 
-### Code Splitting
+In the details page, the webapp retrieves data from the API to show detailed data in the category.
+When the user clicks on the "Back" button (<), the user navigates to the home page.
+Testing requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Create unit tests for pure functions in your Redux code.
+Create integration tests for your application using the React Testing Library.
+You may need to mock the access to the API, so that your tests don't send actual requests.
+You may need to mock the connection to the Redux Store.
+Technical requirements
 
-### Analyzing the Bundle Size
+The project is a single-page application (SPA) built with React and Redux.
+The data retrieved from the API should be stored in the Redux store.
+You should filter the data that you retrieve from the API using a Filter stateless component.
+Every page (the main page and the pages for each item) should have a unique route within the SPA.
+The project should be deployed and accessible online (add a link to the online version of your app to your README file).
+Project documentation
+Once you have finished the development of the project, you should record a video presenting the features of the project you built. It is a video with a maximum length of 5 minutes. The content of the video should include:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+a description of the project.
+a demo of the project features.
+you should also highlight some interesting piece of code or something you built that you are very proud of.
+For recording the video you can use tools like Loom that let you share a private link to the recording, and configure a shot that shows your computer screen and your face at the same time in a small picture.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors
 
-### Advanced Configuration
+👤 **Jean Bulambo**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- GitHub: [@Jeanbulambo](https://github.com/Jeanbulambo)
+- Twitter: [@Jeanbulambo](https://twitter.com/Jeanbulambo4)
+- LinkedIn: [@Jeanbulambo](https://www.linkedin.com/in/jean-bulambo-20662a14a/)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `npm run build` fails to minify
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
